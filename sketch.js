@@ -96,6 +96,10 @@ class Game{
 	mouseMoved(e){
 		let GX = mouseX*(0.8675925925925926/MS);
 		let GY = mouseY*(0.8675925925925926/MS);
+		if(e=="suma"){
+			GX = touches[0].x*(0.8675925925925926/MS);
+			GY = touches[0].y*(0.8675925925925926/MS);
+		}
 		if(this.tatiStat.id==0){
 			let x = GX-1177;
 			let y = GY-300+103;
@@ -122,7 +126,6 @@ class Game{
 			this.tatiStat.type=0;
 			if(x*x+y*y<600**2){
 				this.tatiStat.type=1;
-				console.log(1)
 			}
 		}
 
@@ -131,6 +134,10 @@ class Game{
 	mouseClicked(d){//103
 		let GX = mouseX*(0.8675925925925926/MS);
 		let GY = mouseY*(0.8675925925925926/MS);
+		if(d=="suma"){
+			GX = touches[0].x*(0.8675925925925926/MS);
+			GY = touches[0].y*(0.8675925925925926/MS);
+		}
 		let C = frameCount%24
 		console.log(C)
 		if(this.state==0){//ればー
@@ -321,6 +328,7 @@ function setup() {
 }
 
 function draw() {
+
 	//translate(-width/2,-height/2)
 	background(255,245,245);
 	game.draw();
@@ -334,4 +342,18 @@ function mouseMoved(e){
 function mouseClicked(e){
 	game.mouseClicked(e)
 	console.log(e)
+}
+
+function touchMoved(e){
+	let y="suma"
+
+	game.mouseClicked(y)
+	game.mouseMoved(y);
+}
+
+function touchStarted(fxn){
+	let y="suma"
+
+	game.mouseClicked(y)
+	game.mouseMoved(y);
 }
