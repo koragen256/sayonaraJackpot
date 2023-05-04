@@ -182,6 +182,7 @@ class Game{
 					if(this.slotMs[0]==0){
 						this.state=5;
 						setTimeout(()=>{
+							this.nextTatiC-=10;
 							so["jack"].play();
 							so["jack"].onended(()=>{this.state=0});
 						},200)
