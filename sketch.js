@@ -295,9 +295,9 @@ class Game{
 	onSlotStoped(){
 		this.nextTatiC--;
 		if(this.nextTatiC<=0){
-			this.nextTatiC=5
-			this.tatiStat.id = frameCount%4
-			if(this.tatiStat.id==2)this.nextTatiC=10;
+			this.nextTatiC=6
+			this.tatiStat.id = (frameCount+this.tatiStat.id)%4
+			if(this.tatiStat.id==2)this.nextTatiC=20;
 		}
 		
 	}

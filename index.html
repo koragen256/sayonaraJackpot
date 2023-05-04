@@ -1,15 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8" />
-
-  </head>
-  <body style="background-color: rgb(255, 240, 243);">
-    <main style="align-self: center;">
-    </main>
-    <script src="sketch.js"></script>
-  </body>
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<meta charset="utf-8" />
+	</head>
+	<style>
+		#info {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			height: 100%;
+		}
+		.copyright {
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			margin: 10px;
+			font-size: 20px;
+			color: #000000;
+		}
+	</style>
+	<script>
+		if (/Mobi/.test(navigator.userAgent)) {
+			alert("PC chromeでのみ動作確認しています");
+		}
+	</script>
+	<body style="background-color: rgb(255, 253, 253)">
+		<main style="align-self: center"></main>
+		<div id="info">
+			<a
+				href="http://twitter.com/share?url=https://koragen256.github.io/sayonaraJackpot/&hashtags=さよならジャックポットしみゅれーたー"
+			>
+				<img src="src/IMG_1558.png" width="200" />
+			</a>
+		</div>
+		<a class="copyright" href="https://twitter.com/igusuri_please">
+			Thanks for iyowa
+		</a>
+		<script src="sketch.js"></script>
+		
+	</body>
 </html>
