@@ -96,7 +96,7 @@ class Game{
 	mouseMoved(e){
 		let GX = mouseX*(0.8675925925925926/MS);
 		let GY = mouseY*(0.8675925925925926/MS);
-		if(e=="suma"){
+		if(e=="suma"&&touches.length>=1){
 			GX = touches[0].x*(0.8675925925925926/MS);
 			GY = touches[0].y*(0.8675925925925926/MS);
 		}
@@ -134,7 +134,7 @@ class Game{
 	mouseClicked(d){//103
 		let GX = mouseX*(0.8675925925925926/MS);
 		let GY = mouseY*(0.8675925925925926/MS);
-		if(d=="suma"){
+		if(d=="suma"&&touches.length>=1){
 			GX = touches[0].x*(0.8675925925925926/MS);
 			GY = touches[0].y*(0.8675925925925926/MS);
 		}
